@@ -122,16 +122,45 @@ crc daemon &
 crc start
 ```
 
+Openshift CRC started and display the below messages
+```bash
+Started the OpenShift cluster.
+
+The server is accessible via web console at:
+  https://console-openshift-console.apps-crc.testing
+
+Log in as administrator:
+  Username: kubeadmin
+  Password: 5HCov-kARJo-LTR7q-uSQSC
+
+Log in as user:
+  Username: developer
+  Password: developer
+
+Use the 'oc' command line interface:
+  $ eval $(crc oc-env)
+  $ oc login -u developer https://api.crc.testing:6443
+```
+
 ## 6. Connect to the server
 
-Open the /etc/hosts, and add the following 3 lines.
-(@see https://code-ready.github.io/crc/#dns-configuration-linux_gsg)
+in Windows, open host file in C:\Windows\Systems32\drivers\etc and add the following lines.
+Note: 
+34.28.146.196 is Openshift CRC VM public IP address.
 
 ```text
-34.146.76.136 api.crc.testing
-34.146.76.136 oauth-openshift.apps-crc.testing
-34.146.76.136 console-openshift-console.apps-crc.testing
+34.28.146.196	console-openshift-console.apps-crc.testing 
+34.28.146.196	canary-openshift-ingress-canary.apps-crc.testing 
+34.28.146.196	console-openshift-console.apps-crc.testing
+34.28.146.196	default-route-openshift-image-registry.apps-crc.testing 
+34.28.146.196	downloads-openshift-console.apps-crc.testing 
+34.28.146.196	oauth-openshift.apps-crc.testing
+34.28.146.196	api.crc.testing
 ```
+
+Open openshift GUI via browser:
+
+https://console-openshift-console.apps-crc.testing
 
 Login as an administrator, then request the resources.
 
