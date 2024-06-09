@@ -1,12 +1,5 @@
 # Setup Openshift CRC instance on Google Cloud
 
-| Attempt | #1    | #2    |
-| :---:   | :---: | :---: |
-| Seconds | 301   | 283   |
-
-
-![alt text](https://www.google.com/url?sa "TITLE")
-
 ## 1. Set GCP Project
 
 ```bash
