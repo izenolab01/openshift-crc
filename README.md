@@ -7,7 +7,15 @@
 
 ![alt text](https://www.google.com/url?sa "TITLE")
 
-## 1. Create Custom Subnet and Firewall Rule
+## 1. Set GCP Project
+
+```bash
+PROJECT_ID=devops-lab01
+
+gcloud config set project $PROJECT_ID
+
+```
+## 2. Create Custom Subnet and Firewall Rule
 
 ```bash
 VPC_NAME=vpc-crc
