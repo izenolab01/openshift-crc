@@ -47,6 +47,8 @@ gcloud compute firewall-rules create $FW_RULE2 \
 
 ## 2. Enable Nested Virtualization
 
+Only when using Google Organizations.
+
 ```bash
 
 gcloud resource-manager org-policies \
