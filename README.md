@@ -51,7 +51,7 @@ gcloud compute firewall-rules create $FW_RULE2 \
 
 gcloud resource-manager org-policies \
   disable-enforce compute.disableNestedVirtualization \
-  --project=vivid-kite-410909
+  --project=$PROJECT_ID
 
 ```
 
