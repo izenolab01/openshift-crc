@@ -1,4 +1,4 @@
-# Setup a CRC instance on Google Cloud
+# Setup Openshift CRC instance on Google Cloud
 
 | Attempt | #1    | #2    |
 | :---:   | :---: | :---: |
