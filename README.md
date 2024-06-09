@@ -43,7 +43,7 @@ gcloud compute firewall-rules create $FW_RULE2 \
 
 ```
 
-## 2. Enable Nested Virtualization
+## 3. Enable Nested Virtualization
 
 Only when using Google Organizations.
 
@@ -55,7 +55,7 @@ gcloud resource-manager org-policies \
 
 ```
 
-## 3. Create a VM
+## 4. Create a VM
 
 ```bash
 VM_NAME="openshift-crc"
@@ -84,7 +84,7 @@ gcloud compute instances add-metadata $VM_NAME \
 gcloud compute ssh $VM_NAME --ssh-key-file="id_rsa_crc" --tunnel-through-iap
 ```
 
-## 3. Install CRC
+## 5. Install CRC
 
 Login to Vm and Install Openshift CRC.
 
@@ -105,14 +105,14 @@ crc setup
 exit
 ```
 
-## 4. Reset the VM
+## 6. Reset the VM
 
 ```bash
 gcloud compute instances reset $VM_NAME --zone $VM_ZONE
 gcloud compute ssh $VM_NAME --zone $VM_ZONE
 ```
 
-## 5. Start the CRC server
+## 7. Start the CRC server
 
 You have to prepare a `pull secret` on https://cloud.redhat.com/openshift/create/local in advance.
 
@@ -142,7 +142,7 @@ Use the 'oc' command line interface:
   $ oc login -u developer https://api.crc.testing:6443
 ```
 
-## 6. Connect to the server
+## 8. Connect to the server
 
 in Windows, open host file in C:\Windows\Systems32\drivers\etc and add the following lines.
 Note: 
@@ -181,11 +181,13 @@ export KUBECONFIG=$HOME/.crc/machines/crc/kubeconfig
 kubectl get po --all-namespaces | wc -l
 ```
 
-## 6. Make a StorageClass
+## 9. Make a StorageClass
 
 @see https://github.com/code-ready/crc/wiki/Dynamic-volume-provisioning
 
-## 7. HAProxy Setup
+## 10. HAProxy Setup
+HA Proxy is optional when openshift CRC installed at on-prmise VM.
+
 Make sure you have haproxy and a few other things
 
 ```bash
