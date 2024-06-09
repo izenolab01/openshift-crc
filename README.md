@@ -81,6 +81,8 @@ gcloud compute ssh $VM_NAME --ssh-key-file="id_rsa_crc" --tunnel-through-iap
 
 ## 3. Install CRC
 
+Login to Vm and Install Openshift CRC.
+
 ```bash
 sudo apt-get update
 sudo apt install -y qemu-kvm libvirt-daemon libvirt-daemon-system network-manager
