@@ -1,7 +1,8 @@
 # Setup Openshift CRC instance on Google Cloud
 
 ## Reference
-![alt text][https://crc.dev/crc/getting_started/getting_started/introducing/ "CRC"]
+
+Visit https://crc.dev/crc/getting_started/getting_started/introducing/
 
 
 ## 1. Set GCP Project
